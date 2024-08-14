@@ -1,19 +1,18 @@
 package com.booleanuk.core;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class Basket {
-    public List<Product> items = new ArrayList<>();
+    public HashMap<String, Integer> items = new HashMap<>();
 
-    public void add(Product product) {
-        this.items.add(product);
+    public void add(String product, int price) {
+        this.items.put(product, price);
     }
 
     public float total() {
-        float price = 0;
-        for (Product product : this.items)
-            price += product.price();
+        int price = 0;
+        for (int p : this.items.values())
+            price += p;
 
         return price;
     }
