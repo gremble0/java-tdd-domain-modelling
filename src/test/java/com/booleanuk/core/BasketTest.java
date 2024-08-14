@@ -12,12 +12,12 @@ class BasketTest {
     }
 
     @Test
-    public void shouldCalculatePrice() {
+    public void shouldCalculateTotal() {
         Basket basket = new Basket();
         basket.add(new Product("Bread", 29, 0.0f));
         basket.add(new Product("Soda", 20, 0.5f));
         Assertions.assertEquals(2, basket.items.size());
-        Assertions.assertEquals(29 + (20 * 0.5), basket.price());
+        Assertions.assertEquals(29 + (20 * 0.5), basket.total());
     }
 
 }

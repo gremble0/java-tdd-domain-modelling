@@ -10,7 +10,7 @@ public class Basket {
         this.items.add(product);
     }
 
-    public float price() {
+    public float total() {
         float price = 0;
         for (Product product : this.items)
             price += product.price();

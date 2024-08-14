@@ -15,6 +15,6 @@ class ProductTest {
     @Test
     public void shouldCalculatePrice() {
         Product product = new Product("Bread", 29, 0.0f);
-        Assertions.assertEquals(29, product.price());
+        Assertions.assertEquals(29, product.total());
     }
 }
